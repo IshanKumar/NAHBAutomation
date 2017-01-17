@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="NAHB Regression Test Suite" verbose="10" parallel="none">
+
+
+
+    <test name="NAHB Tests on Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="environment" value="regression.frontend"/>
+
+        <classes>
+            <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Footer"/>
+            <class name="com.velir.Header"/>
+            <class name="com.velir.Homepage"/>
+        </classes>
+    </test>
+
+    <test name="NAHB Tests on Firefox">
+        <parameter name="browser" value="FF"/>
+        <parameter name="environment" value="regression.frontend"/>
+
+        <classes>
+            <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Footer"/>
+            <class name="com.velir.Header">
+                <methods>
+                    <exclude name="primarynavigation"/>
+                </methods>
+            </class>
+            <class name="com.velir.Homepage">
+                <methods>
+                    <exclude name="loadMore"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="NAHB Tests on Internet Explorer">
+        <parameter name="browser" value="IE"/>
+        <parameter name="environment" value="regression.frontend"/>
+
+        <classes>
+            <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Footer"/>
+            <class name="com.velir.Header"/>
+            <class name="com.velir.Homepage"/>
+        </classes>
+    </test>
+
+
+
+</suite>
