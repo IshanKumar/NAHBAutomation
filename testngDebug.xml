@@ -10,13 +10,48 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Bookmark"/>
+            <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
             <class name="com.velir.Header"/>
             <class name="com.velir.Homepage"/>
+            <class name="com.velir.Learn"/>
         </classes>
     </test>
 
+    <test name="NAHB Tests on Firefox">
+        <parameter name="browser" value="FF"/>
+        <parameter name="environment" value="regression.frontend"/>
 
+        <classes>
+            <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Bookmark"/>
+            <class name="com.velir.Find"/>
+            <class name="com.velir.Footer"/>
+            <class name="com.velir.Header"/>
+            <class name="com.velir.Homepage">
+                <methods>
+                    <exclude name="loadMore"/>
+                </methods>
+            </class>
+            <class name="com.velir.Learn"/>
+        </classes>
+    </test>
+
+    <test name="NAHB Tests on Internet Explorer">
+        <parameter name="browser" value="IE"/>
+        <parameter name="environment" value="regression.frontend"/>
+
+        <classes>
+            <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Bookmark"/>
+            <class name="com.velir.Find"/>
+            <class name="com.velir.Footer"/>
+            <class name="com.velir.Header"/>
+            <class name="com.velir.Homepage"/>
+            <class name="com.velir.Learn"/>
+        </classes>
+    </test>
 
 
 

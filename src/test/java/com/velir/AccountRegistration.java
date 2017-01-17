@@ -112,6 +112,100 @@ public class AccountRegistration extends SetupClass {
 
     }
 
+
+    @Test
+    public void toggleOnDashboard(){
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+
+        loginRepeat("qaqa4@yopmail.com");
+
+        Assert.assertTrue(helper.isElementDisplayed(By.cssSelector(".bookmarks")));
+
+
+        helper.click(By.id("contentregion_0_membercontainertop_1_bookmarks"));
+
+        helper.waitForSeconds(14);
+
+        Assert.assertFalse(helper.isElementDisplayed(By.cssSelector(".bookmarks")));
+
+        helper.click(By.id("contentregion_0_membercontainertop_1_bookmarks"));
+        helper.waitForSeconds(6);
+
+        Assert.assertTrue(helper.isElementDisplayed(By.cssSelector(".bookmarks")));
+
+
+
+    }
+
+    @Test
+    public void bookmark(){
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+
+        By iconLocator = By.id("headerregion_1_breadcrumbregion_0_ctl00_lbAddBookmark");
+
+        loginRepeat("qaqa4@yopmail.com");
+
+        helper.getURL(ENV + "/en/research/housing-economics/housing-indexes.aspx");
+
+        Assert.assertTrue(helper.isElementDisplayed(iconLocator));
+
+        helper.click(iconLocator);
+
+        Assert.assertFalse(helper.isElementPresent(iconLocator));
+
+        helper.getURL(ENV + "/en/member-pages/my-dashboard.aspx");
+
+        Assert.assertEquals(helper.getElementText(By.id("contentregion_0_membercontainerright_0_rptBookmarks_hlBookmark_1")), "Housing Indexes");
+
+        helper.click(By.id("contentregion_0_membercontainerright_0_rptBookmarks_lbDelete_1"));
+
+        helper.waitForSeconds(14);
+
+        Assert.assertFalse(helper.isElementPresent(By.id("contentregion_0_membercontainerright_0_rptBookmarks_hlBookmark_1")));
+
+
+    }
+
+
+    @Test
+    public void updateProfile() {
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+
+        loginRepeat("qaqa4@yopmail.com");
+
+        helper.waitForSeconds(6);
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".nav_btn4")), "WELCOME LARRY");
+
+        helper.getURL(ENV + "/member-pages/my-profile");
+
+        helper.waitForSeconds(4);
+
+        updateProfileRepeat("LARRYQA");
+
+        updateProfileRepeat("LARRY");
+
+
+
+
+    }
+
+    private void updateProfileRepeat(String userName) {
+        helper.sendKeys(By.id("contentregion_0_txtFirstName"), userName);
+
+        helper.sendKeys(By.cssSelector("#contentregion_0_txtEmail2"),"qaqa4@yopmail.com");
+
+
+        helper.click(By.cssSelector("#contentregion_0_btnSave"));
+
+        helper.waitForSeconds(6);
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".nav_btn4")), "WELCOME " + userName);
+
+    }
+
     private void forgotRepeat(String answer, String message) {
         helper.sendKeys(By.id("contentregion_1_txtQuestion"), answer);
         helper.sendKeys(By.id("contentregion_1_txtNewPass"), "Pass12345");
@@ -121,6 +215,8 @@ public class AccountRegistration extends SetupClass {
     }
 
     private void loginRepeat(String username) {
+
+        helper.waitForSeconds(4);
 
         helper.sendKeys(By.id("contentregion_0_txtUserName"), username);
 

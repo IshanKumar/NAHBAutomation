@@ -10,9 +10,12 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Bookmark"/>
+            <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
             <class name="com.velir.Header"/>
             <class name="com.velir.Homepage"/>
+            <class name="com.velir.Learn"/>
         </classes>
     </test>
 
@@ -22,17 +25,16 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Bookmark"/>
+            <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
-            <class name="com.velir.Header">
-                <methods>
-                    <exclude name="primarynavigation"/>
-                </methods>
-            </class>
+            <class name="com.velir.Header"/>
             <class name="com.velir.Homepage">
                 <methods>
                     <exclude name="loadMore"/>
                 </methods>
             </class>
+            <class name="com.velir.Learn"/>
         </classes>
     </test>
 
@@ -42,9 +44,12 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Bookmark"/>
+            <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
             <class name="com.velir.Header"/>
             <class name="com.velir.Homepage"/>
+            <class name="com.velir.Learn"/>
         </classes>
     </test>
 

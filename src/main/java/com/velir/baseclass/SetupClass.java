@@ -26,7 +26,7 @@ public class SetupClass {
 
     @BeforeMethod
     @Parameters({"browser","environment"})
-    public void launchBrowser(@Optional("Chrome")String browser,@Optional("regression.frontend") String environment){  //to launch browser, open url and click on our consultants
+    public void launchBrowser(@Optional("FF")String browser,@Optional("regression.frontend") String environment){  //to launch browser, open url and click on our consultants
 
             switch (browser){
                 case "Chrome":
@@ -81,9 +81,9 @@ public class SetupClass {
 
 
 
-    @AfterMethod
-    public void closeBrowser(){ //to close and quit browser
-        driver.close();
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void closeBrowser(){ //to close and quit browser
+//        driver.close();
+//        driver.quit();
+//    }
 }
