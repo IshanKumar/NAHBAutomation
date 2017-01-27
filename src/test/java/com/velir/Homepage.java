@@ -13,15 +13,15 @@ import java.util.List;
  */
 public class Homepage extends SetupClass {
 
-    @Test
-    public void carousel(){
-
-
-        helper.getURL(ENV);
-
-
-
-    }
+//    @Test
+//    public void carousel(){
+//
+//
+//        helper.getURL(ENV);
+//
+//
+//
+//    }
 
 
     @Test
@@ -84,7 +84,7 @@ public class Homepage extends SetupClass {
 
     }
 
-    //incomplete
+
     @Test
     public void upcomingEvents(){
 

@@ -26,24 +26,24 @@ public class SetupClass {
 
     @BeforeMethod
     @Parameters({"browser","environment"})
-    public void launchBrowser(@Optional("FF")String browser,@Optional("regression.frontend") String environment){  //to launch browser, open url and click on our consultants
+    public void launchBrowser(@Optional("IE")String browser,@Optional("regression.frontend") String environment){  //to launch browser, open url and click on our consultants
 
             switch (browser){
                 case "Chrome":
                     System.setProperty("webdriver.chrome.driver",
-                            "C:\\Browser Drivers\\chromedriver.exe");
+                            "C:\\BrowserDrivers\\chromedriver.exe");
                     driver = new ChromeDriver();
                     driver.manage().window().setSize(new Dimension(1250, 1050));
                     break;
 
                 case "FF":
-                    System.setProperty("webdriver.gecko.driver","C:\\Browser Drivers\\geckodriver.exe");
+                    System.setProperty("webdriver.gecko.driver","C:\\BrowserDrivers\\geckodriver.exe");
                     driver = new FirefoxDriver();
                     break;
 
                 case "IE":
                     System.setProperty("webdriver.ie.driver",
-                            "C:\\Browser Drivers\\IEDriverServer.exe");
+                            "C:\\BrowserDrivers\\IEDriverServer.exe");
                     driver = new InternetExplorerDriver();
 
                     break;
@@ -51,7 +51,7 @@ public class SetupClass {
 
                 case "Mobile":
                     System.setProperty("webdriver.chrome.driver",
-                            "C:\\Browser Drivers\\chromedriver.exe");
+                            "C:\\BrowserDrivers\\chromedriver.exe");
                     Map<String, String> mobileEmulation = new HashMap<String, String>();
                    //mobileEmulation.put("deviceName", "Apple iPhone 6");
                     mobileEmulation.put("deviceName", "Google Nexus 6");
@@ -65,6 +65,7 @@ public class SetupClass {
 
 
                 default:
+                    System.setProperty("webdriver.gecko.driver","C:\\BrowserDrivers\\geckodriver.exe");
                     driver = new FirefoxDriver();
                     break;
             }
@@ -81,9 +82,9 @@ public class SetupClass {
 
 
 
-//    @AfterMethod
-//    public void closeBrowser(){ //to close and quit browser
-//        driver.close();
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void closeBrowser(){ //to close and quit browser
+        driver.close();
+        driver.quit();
+    }
 }
