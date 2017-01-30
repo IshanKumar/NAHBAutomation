@@ -73,8 +73,9 @@ public class Header extends SetupClass {
         Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "For Industry Professionals");
 
         helper.click(By.cssSelector(".cyan>li:nth-child(3)>a:nth-child(2)"));
-        Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "For Consumers");
         helper.waitForSeconds(6);
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "For Consumers");
+
 
         helper.click(By.cssSelector(".blue>li:nth-child(1)>a:nth-child(2)"));
         helper.waitForSeconds(6);
@@ -133,7 +134,7 @@ public class Header extends SetupClass {
 
 
         helper.click(By.cssSelector("#UtilityNavigation>a:nth-child(3)"));
-        helper.waitForSeconds(8);
+        helper.waitForSeconds(10);
         Assert.assertEquals(driver.getCurrentUrl(),"https://builderbooks.com/");
 
 

@@ -54,7 +54,7 @@ public class Footer extends SetupClass {
 
         Assert.assertEquals(helper.getElementsText(By.cssSelector(".col>h2")), expectedHeaderLinks);
 
-        Assert.assertEquals(helper.getElementsText(By.cssSelector(".col>ul>li>a")).size(), 26);
+        Assert.assertEquals(helper.getElementsText(By.cssSelector(".col>ul>li>a")).size(), 30);
 
         //Language selector drop down
 
