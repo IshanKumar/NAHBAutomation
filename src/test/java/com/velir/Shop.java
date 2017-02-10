@@ -47,8 +47,6 @@ public class Shop extends SetupClass {
         helper.getURL(ENV + "/en/Products.aspx");
 
 
-
-
         List<String> actualValues = helper.getElementsAttribute(By.cssSelector(".category>a"),"href");
 
         helper.log(actualValues);
