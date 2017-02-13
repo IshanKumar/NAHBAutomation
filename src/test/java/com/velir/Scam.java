@@ -74,6 +74,7 @@ public class Scam extends SetupClass {
 
         helper.click(By.cssSelector("#submitSearchZipBtn"));
 
+        helper.waitForSeconds(4);
         Assert.assertEquals(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")), "Result 1 of 1");
         Assert.assertEquals(driver.findElements(By.cssSelector(".item.CoveoResult")).size(), 1);
 

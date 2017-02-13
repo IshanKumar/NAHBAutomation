@@ -12,6 +12,12 @@ import org.testng.annotations.Test;
 public class AccountRegistration extends SetupClass {
 
 
+
+//        emailAddress2 = configuration.getString("emailAddress2");
+//        emailAddress1 = configuration.getString("emailAddress1");
+
+
+
     @Test
     public void withoutPinCode(){
 
@@ -63,22 +69,21 @@ public class AccountRegistration extends SetupClass {
     @Test
     public void login() {
 
+
+
         helper.getURL(ENV + "/login?NoReferrer=1");
 
-        loginRepeat("qaqa4");
+        loginRepeat("qaqa4","Pass12345");
 
 
         Assert.assertEquals(helper.getElementText(By.id("contentregion_0_errorMessage")), "The username or password you entered is invalid.");
 
 
-        loginRepeat("qaqa4@yopmail.com");
+        //loginRepeat(emailAddress2,"Pass12345");
 
         helper.waitForSeconds(6);
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".nav_btn4")), "WELCOME LARRY");
-
-
-
 
     }
 
@@ -102,7 +107,7 @@ public class AccountRegistration extends SetupClass {
         helper.getURL(ENV + "/login?NoReferrer=1");
 
 
-        loginRepeat(emailAddress);
+        loginRepeat(emailAddress,"Pass12345");
 
         helper.waitForSeconds(4);
 
@@ -118,7 +123,7 @@ public class AccountRegistration extends SetupClass {
 
         helper.getURL(ENV + "/login?NoReferrer=1");
 
-        loginRepeat("qaqa4@yopmail.com");
+        loginRepeat("qaqa4@yopmail.com","Pass12345");
 
         Assert.assertTrue(helper.isElementDisplayed(By.cssSelector(".bookmarks")));
 
@@ -145,7 +150,7 @@ public class AccountRegistration extends SetupClass {
 
         By iconLocator = By.id("headerregion_1_breadcrumbregion_0_ctl00_lbAddBookmark");
 
-        loginRepeat("qaqa4@yopmail.com");
+        loginRepeat("qaqa4@yopmail.com","Pass12345");
 
         helper.getURL(ENV + "/en/research/housing-economics/housing-indexes.aspx");
 
@@ -174,7 +179,7 @@ public class AccountRegistration extends SetupClass {
 
         helper.getURL(ENV + "/login?NoReferrer=1");
 
-        loginRepeat("qaqa4@yopmail.com");
+        loginRepeat("qaqa4@yopmail.com","Pass12345");
 
         helper.waitForSeconds(6);
 
@@ -214,13 +219,13 @@ public class AccountRegistration extends SetupClass {
         Assert.assertEquals(helper.getElementText(By.id("divLog")), message);
     }
 
-    private void loginRepeat(String username) {
+    private void loginRepeat(String username, String password) {
 
         helper.waitForSeconds(4);
 
         helper.sendKeys(By.id("contentregion_0_txtUserName"), username);
 
-        helper.sendKeys(By.id("contentregion_0_txtPassword"), "Pass12345");
+        helper.sendKeys(By.id("contentregion_0_txtPassword"), password);
 
         helper.click(By.id("contentregion_0_btnSubmit"));
     }
