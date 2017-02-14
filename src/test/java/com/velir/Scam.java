@@ -1,6 +1,7 @@
 package com.velir;
 
 import com.velir.baseclass.SetupClass;
+import com.velir.pageobject.GeneralPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -36,9 +37,6 @@ public class Scam extends SetupClass {
 
 
         Assert.assertEquals(driver.findElements(By.cssSelector(".item.CoveoResult")).size(), 1);
-
-
-
 
 
 
@@ -80,6 +78,70 @@ public class Scam extends SetupClass {
 
 
     }
+
+
+    @Test
+    public void nahbLogout() {
+
+
+        helper.getURL(ENV + "/en/find/Student Chapter Alumni Member.aspx");
+
+
+        helper.sendKeys(By.cssSelector("#zip"), "9810");
+
+        helper.waitForSeconds(2);
+
+        helper.click(By.cssSelector("#submitSearchZipBtn"));
+
+        helper.click(By.xpath(".//*[@id='box1']/div[1]/p[3]"));
+
+        GeneralPage page = new GeneralPage(driver);
+
+        page.loginRepeat(configuration.getString("emailAddress1"), "Pass12345");
+
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "Verify and Update Your Profile");
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector("#contentregion_0_btnSave")),"Update & Continue");
+
+
+
+    }
+
+    @Test
+    public void nahbLoggedin() {
+
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+
+        GeneralPage page = new GeneralPage(driver);
+
+        page.loginRepeat(configuration.getString("emailAddress1"), "Pass12345");
+
+
+        helper.getURL(ENV + "/en/find/Student Chapter Alumni Member.aspx");
+
+
+        helper.sendKeys(By.cssSelector("#zip"), "9810");
+
+        helper.waitForSeconds(2);
+
+        helper.click(By.cssSelector("#submitSearchZipBtn"));
+
+        helper.click(By.xpath(".//*[@id='box1']/div[1]/p[3]"));
+
+
+
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "Verify and Update Your Profile");
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector("#contentregion_0_btnSave")),"Update & Continue");
+
+
+
+    }
+
+
 
 
 

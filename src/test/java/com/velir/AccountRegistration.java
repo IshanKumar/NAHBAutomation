@@ -1,10 +1,15 @@
 package com.velir;
 
 import com.velir.baseclass.SetupClass;
+import com.velir.pageobject.GeneralPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by ishan.kumar on 1/13/2017.
@@ -13,8 +18,15 @@ public class AccountRegistration extends SetupClass {
 
 
 
-//        emailAddress2 = configuration.getString("emailAddress2");
-//        emailAddress1 = configuration.getString("emailAddress1");
+    public GeneralPage page;
+
+//    @BeforeClass
+//    public void beforeClass() {
+//        System.out.println("BeforeClass");
+//        page = new GeneralPage(driver);
+//    }
+
+
 
 
 
@@ -70,18 +82,17 @@ public class AccountRegistration extends SetupClass {
     public void login() {
 
 
+        page = new GeneralPage(driver);
 
         helper.getURL(ENV + "/login?NoReferrer=1");
 
-        loginRepeat("qaqa4","Pass12345");
-
+        page.loginRepeat("qaqa4", "Pass12345");
 
         Assert.assertEquals(helper.getElementText(By.id("contentregion_0_errorMessage")), "The username or password you entered is invalid.");
 
 
-        //loginRepeat(emailAddress2,"Pass12345");
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
-        helper.waitForSeconds(6);
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".nav_btn4")), "WELCOME LARRY");
 
@@ -91,8 +102,9 @@ public class AccountRegistration extends SetupClass {
     public void forgotPassword() {
 
         helper.getURL(ENV + "/en/forgot-password.aspx");
+        page = new GeneralPage(driver);
 
-        String emailAddress = "qaqa2@yopmail.com";
+        String emailAddress = configuration.getString("emailAddress1");
 
         helper.sendKeys(By.id("contentregion_1_txtUserName"), emailAddress);
 
@@ -107,12 +119,10 @@ public class AccountRegistration extends SetupClass {
         helper.getURL(ENV + "/login?NoReferrer=1");
 
 
-        loginRepeat(emailAddress,"Pass12345");
+        page.loginRepeat(emailAddress, "Pass12345");
 
-        helper.waitForSeconds(4);
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".nav_btn4")), "WELCOME FIRSTNAME");
-
 
 
     }
@@ -122,8 +132,9 @@ public class AccountRegistration extends SetupClass {
     public void toggleOnDashboard(){
 
         helper.getURL(ENV + "/login?NoReferrer=1");
+        page = new GeneralPage(driver);
 
-        loginRepeat("qaqa4@yopmail.com","Pass12345");
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
         Assert.assertTrue(helper.isElementDisplayed(By.cssSelector(".bookmarks")));
 
@@ -147,10 +158,11 @@ public class AccountRegistration extends SetupClass {
     public void bookmark(){
 
         helper.getURL(ENV + "/login?NoReferrer=1");
+        page = new GeneralPage(driver);
 
         By iconLocator = By.id("headerregion_1_breadcrumbregion_0_ctl00_lbAddBookmark");
 
-        loginRepeat("qaqa4@yopmail.com","Pass12345");
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
         helper.getURL(ENV + "/en/research/housing-economics/housing-indexes.aspx");
 
@@ -179,7 +191,9 @@ public class AccountRegistration extends SetupClass {
 
         helper.getURL(ENV + "/login?NoReferrer=1");
 
-        loginRepeat("qaqa4@yopmail.com","Pass12345");
+        page = new GeneralPage(driver);
+
+        page.loginRepeat("qaqa4@yopmail.com", "Pass12345");
 
         helper.waitForSeconds(6);
 
@@ -195,8 +209,89 @@ public class AccountRegistration extends SetupClass {
 
 
 
+    }
+
+
+    @Test
+    public void dashboardContent() {
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+        page = new GeneralPage(driver);
+
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
+        helper.waitForSeconds(3);
+
+
+
+        Assert.assertEquals(driver.getCurrentUrl(), ENV + "/en/member-pages/my-dashboard");
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".right>h1")), "LARRY Roderick");
+
+
+        Assert.assertTrue(helper.isImagePresent(By.cssSelector("#contentregion_0_membercontainertop_0_imgUser")));
+
+
+        List<String> actualValues = helper.getElementsText(By.cssSelector(".right>p"));
+
+        helper.log(actualValues);
+
+        List<String> expectedValues= Arrays.asList("BRYAN, TX", "qaqa4@yopmail.com", "NAHB PIN: 1548675", "Spike Credits: 0.00");
+
+        Assert.assertEquals(actualValues, expectedValues);
+
+
+       Assert.assertEquals(driver.findElements(By.cssSelector(".item.CoveoResult>p>a")).size(), 3);
+
+
+
+
 
     }
+
+
+    //default is all 15 selected
+    @Test
+    public void interestsEditProfile() {
+
+        By checkboxToClick = By.cssSelector("#contentregion_2_ctl02_rptInterests_cbOption_28");
+
+        By checkboxToView = By.cssSelector("#contentregion_2_ctl02_rptInterests_cbOption_30");
+        By saveChanges =By.cssSelector("#contentregion_2_ctl02_btnSave");
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+        page = new GeneralPage(driver);
+
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
+
+
+        helper.getURL(ENV + "/en/member-pages/my-profile.aspx");
+        helper.waitForSeconds(3);
+
+        helper.click(By.cssSelector(".tab3.tab"));
+
+
+        Assert.assertTrue(driver.findElement(checkboxToClick).isSelected());
+        Assert.assertFalse(driver.findElement(checkboxToView).isEnabled());
+
+
+
+
+        helper.click(checkboxToClick);
+        helper.click(saveChanges);
+
+
+        Assert.assertFalse(driver.findElement(checkboxToClick).isSelected());
+        Assert.assertTrue(driver.findElement(checkboxToView).isEnabled());
+        Assert.assertTrue(driver.findElement(checkboxToClick).isEnabled());
+
+        helper.click(checkboxToClick);
+        helper.click(saveChanges);
+        Assert.assertTrue(driver.findElement(checkboxToClick).isSelected());
+
+
+    }
+
+
 
     private void updateProfileRepeat(String userName) {
         helper.sendKeys(By.id("contentregion_0_txtFirstName"), userName);
@@ -219,16 +314,6 @@ public class AccountRegistration extends SetupClass {
         Assert.assertEquals(helper.getElementText(By.id("divLog")), message);
     }
 
-    private void loginRepeat(String username, String password) {
-
-        helper.waitForSeconds(4);
-
-        helper.sendKeys(By.id("contentregion_0_txtUserName"), username);
-
-        helper.sendKeys(By.id("contentregion_0_txtPassword"), password);
-
-        helper.click(By.id("contentregion_0_btnSubmit"));
-    }
 
 
 }

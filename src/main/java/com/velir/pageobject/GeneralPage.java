@@ -1,33 +1,40 @@
 package com.velir.pageobject;
 
 import com.velir.utilities.Helper;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-//import org.apache.commons.lang3.StringUtils;
 
-/**
- * Created by ishan.kumar on 2/2/2016.
- */
-public class GeneralPage {
+
+
+public class GeneralPage  {
 
     public WebDriver driver;
     public Helper helper;
-    //PropertiesConfiguration configuration;
-    //protected PropertiesConfiguration expectedData;
-    //public String ENV;
 
-   // @Parameters({"browser","environment"})
+
+    // @Parameters({"browser","environment"})
     public GeneralPage(WebDriver driver) {
         this.driver = driver;
-       helper =new Helper(driver);
-       // setupClass =new SetupClass();
-//        try {
-//            configuration = new PropertiesConfiguration("testdata/config.properties");
-//            expectedData = new PropertiesConfiguration("testdata/expecteddata.properties");
-//            ENV = configuration.getString(environment);
-//        }catch (Exception E){
-//
-//        }
-    }
+        helper =new Helper(driver);
+        }
+
+
+
+    public void loginRepeat(String username, String password) {
+
+        helper.waitForSeconds(4);
+
+        helper.sendKeys(By.id("contentregion_0_txtUserName"), username);
+
+        helper.sendKeys(By.id("contentregion_0_txtPassword"), password);
+
+        helper.click(By.id("contentregion_0_btnSubmit"));
+
+        helper.waitForSeconds(4);
 
     }
+
+
+
+}
