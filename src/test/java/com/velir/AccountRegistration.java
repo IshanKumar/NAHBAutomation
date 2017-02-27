@@ -20,12 +20,6 @@ public class AccountRegistration extends SetupClass {
 
     public GeneralPage page;
 
-//    @BeforeClass
-//    public void beforeClass() {
-//        System.out.println("BeforeClass");
-//        page = new GeneralPage(driver);
-//    }
-
 
 
 

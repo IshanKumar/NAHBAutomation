@@ -14,6 +14,98 @@ import java.util.List;
 public class Find extends SetupClass {
 
     @Test
+    public void findExecutiveBoard(){
+
+        helper.getURL(ENV + "/en/find/directory-executiveboard.aspx");
+
+        helper.waitForSeconds(4);
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Result 1 of 10"));
+
+        Assert.assertEquals(driver.findElements(By.cssSelector(".coveo-caption")).size(), 10);
+
+
+        List<String> actualValues = helper.getElementsText(By.cssSelector(".CoveoSort"));
+
+        helper.log(actualValues);
+
+        List<String> expectedValues= Arrays.asList("Last Name","First Name");
+
+        Assert.assertEquals(actualValues, expectedValues);
+
+        Assert.assertEquals(driver.findElements(By.cssSelector(".CoveoPager>ul>li")).size(), 11);
+
+
+        helper.click(By.xpath(".//div[2]/ul/li[5]/label/div/span[1]"));
+        helper.waitForSeconds(4);
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-5 of 5"));
+
+
+        Assert.assertFalse(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
+        helper.click(By.xpath(".//div[2]/div[2]/span"));
+        helper.waitForSeconds(4);
+        Assert.assertTrue(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
+
+
+
+    }
+
+
+
+    @Test
+    public void findLocalAssociation(){
+
+        helper.getURL(ENV + "/en/find/directory-hba.aspx");
+        helper.waitForSeconds(4);
+
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Result 1 of 10"));
+
+        Assert.assertEquals(driver.findElements(By.cssSelector(".coveo-caption")).size(), 15);
+
+
+        List<String> actualValues = helper.getElementsText(By.cssSelector(".CoveoSort"));
+        helper.log(actualValues);
+        List<String> expectedValues= Arrays.asList("Local Number");
+        Assert.assertEquals(actualValues, expectedValues);
+
+
+        Assert.assertEquals(driver.findElements(By.cssSelector(".CoveoPager>ul>li")).size(), 11);
+
+
+        helper.click(By.xpath(".//div[2]/ul/li[5]/label/div/span[1]"));
+        helper.waitForSeconds(4);
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-4 of 4"));
+
+
+        Assert.assertFalse(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
+        helper.click(By.xpath(".//div[2]/div[2]/span"));
+        helper.waitForSeconds(4);
+        Assert.assertTrue(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
+
+        Assert.assertTrue(driver.findElement(By.xpath("//div[1]/div[2]/h1")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='submitSearchCityBtn']")).isDisplayed());
+
+        helper.click(By.cssSelector(".hide_search>a"));
+
+        Assert.assertFalse(driver.findElement(By.xpath("//div[1]/div[2]/h1")).isDisplayed());
+        Assert.assertFalse(driver.findElement(By.xpath(".//*[@id='submitSearchCityBtn']")).isDisplayed());
+
+
+    }
+
+    @Test
+    public void staffDirectory() {
+
+        helper.getURL(ENV + "/en/find/directory-nahbstaff.aspx");
+        helper.waitForSeconds(4);
+
+    }
+
+
+
+
+
+
+    @Test
     public void findLink(){
 
         helper.getURL(ENV);
@@ -30,4 +122,7 @@ public class Find extends SetupClass {
 
         Assert.assertEquals(actualValues,expectedValues);
     }
+
+
+
 }
