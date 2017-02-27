@@ -124,7 +124,7 @@ public class Scam extends SetupClass {
 
         helper.click(By.cssSelector("#submitSearchZipBtn"));
 
-        helper.waitForSeconds(4);
+        helper.waitForSeconds(6);
 
         helper.click(By.partialLinkText("Purchase Student Chapter Alumni Membership"));
 

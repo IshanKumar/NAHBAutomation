@@ -38,11 +38,11 @@ public class Find extends SetupClass {
 
         Assert.assertFalse(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
         helper.click(By.xpath(".//div[2]/div[2]/span"));
-        helper.waitForSeconds(4);
+        helper.waitForSeconds(6);
         Assert.assertTrue(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
 
         helper.click(By.xpath(".//div[2]/ul/li[5]/label/div/span[1]"));
-        helper.waitForSeconds(4);
+        helper.waitForSeconds(6);
         Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-5 of 5"));
 
 

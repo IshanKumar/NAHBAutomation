@@ -81,7 +81,7 @@ public class SetupClass {
         }
 
 
-//
+
 //    @AfterMethod
 //    public void closeBrowser(){ //to close and quit browser
 //        driver.close();

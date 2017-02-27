@@ -217,7 +217,7 @@ public class AccountRegistration extends SetupClass {
 
 
 
-        Assert.assertEquals(driver.getCurrentUrl(), ENV + "/en/member-pages/my-dashboard");
+        Assert.assertEquals(driver.getCurrentUrl(), ENV + "/member-pages/my-dashboard");
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".right>h1")), "LARRY Roderick");
 
@@ -262,11 +262,14 @@ public class AccountRegistration extends SetupClass {
 
         helper.click(By.cssSelector(".tab3.tab"));
 
+        if(!driver.findElement(checkboxToClick).isSelected()){
+
+            helper.click(checkboxToClick);
+            helper.click(saveChanges);
+        }
 
         Assert.assertTrue(driver.findElement(checkboxToClick).isSelected());
         Assert.assertFalse(driver.findElement(checkboxToView).isEnabled());
-
-
 
 
         helper.click(checkboxToClick);
@@ -277,9 +280,6 @@ public class AccountRegistration extends SetupClass {
         Assert.assertTrue(driver.findElement(checkboxToView).isEnabled());
         Assert.assertTrue(driver.findElement(checkboxToClick).isEnabled());
 
-        helper.click(checkboxToClick);
-        helper.click(saveChanges);
-        Assert.assertTrue(driver.findElement(checkboxToClick).isSelected());
 
 
     }

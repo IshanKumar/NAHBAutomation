@@ -53,7 +53,12 @@
             <class name="com.velir.Advocate"/>
             <class name="com.velir.Bookmark"/>
             <class name="com.velir.Find"/>
-            <class name="com.velir.Footer"/>
+            <class name="com.velir.Footer">
+            <methods>
+                <exclude name="linkFunction"/>
+                <exclude name="thirdPartyLink"/>
+            </methods>
+            </class>
             <class name="com.velir.Header"/>
             <class name="com.velir.Homepage"/>
             <class name="com.velir.Learn"/>

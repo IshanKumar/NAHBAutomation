@@ -29,50 +29,432 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">NAHBAutomation</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">92.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">NAHB Tests on Chrome</td><td class="numi">34</td><td class="numi">34</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">1,443.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">NAHB Tests on Firefox</td><td class="numi">34</td><td class="numi">34</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,071.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">NAHB Tests on Internet Explorer</td><td class="numi">32</td><td class="numi">32</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">1,459.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">100</td><td class="numi">100</td><td class="numi">0</td><td class="numi_attn">7</td><td class="numi">3,975.3 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <a id="summary"></a>
 <table cellspacing=0 cellpadding=0 class="passed">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
-<tr><th colspan="4">NAHBAutomation &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="2">com.velir.Scam<td><a href="#m1"><b>nahbLogout</b>  </a></td><td class="numi">1</td><td class="numi">41157</td></tr><tr class="failedodd"><td><a href="#m2"><b>nahbLoggedin</b>  </a></td><td class="numi">1</td><td class="numi">38396</td></tr>
+<tr><th colspan="4">NAHB Tests on Chrome &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.velir.Find<td><a href="#m1"><b>findExecutiveBoard</b>  </a></td><td class="numi">1</td><td class="numi">15763</td></tr>
+<tr class="failedeven"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m2"><b>interestsEditProfile</b>  </a></td><td class="numi">1</td><td class="numi">47439</td></tr>
+<tr><th colspan="4">NAHB Tests on Chrome &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m3"><b>toggleOnDashboard</b>  </a></td><td class="numi">1</td><td class="numi">56454</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Scam<td><a href="#m4"><b>nahbLogout</b>  </a></td><td class="numi">1</td><td class="numi">31304</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Footer<td><a href="#m5"><b>components</b>  </a></td><td class="numi">1</td><td class="numi">6092</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Header<td><a href="#m6"><b>tertiaryNavigation</b>  </a></td><td class="numi">1</td><td class="numi">60118</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Scam<td><a href="#m7"><b>nahbLoggedin</b>  </a></td><td class="numi">1</td><td class="numi">42583</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m8"><b>findLink</b>  </a></td><td class="numi">1</td><td class="numi">13800</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m9"><b>searchFunction</b>  </a></td><td class="numi">1</td><td class="numi">23802</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Footer<td><a href="#m10"><b>linkFunction</b>  </a></td><td class="numi">1</td><td class="numi">6611</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Scam<td><a href="#m11"><b>displayLogout</b>  </a></td><td class="numi">1</td><td class="numi">10594</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Footer<td><a href="#m12"><b>thirdPartyLink</b>  </a></td><td class="numi">1</td><td class="numi">6075</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Learn<td><a href="#m13"><b>courseOverview</b>  </a></td><td class="numi">1</td><td class="numi">28341</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Bookmark<td><a href="#m14"><b>bookmarking</b>  </a></td><td class="numi">1</td><td class="numi">78879</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m15"><b>withoutPinCode</b>  </a></td><td class="numi">1</td><td class="numi">25038</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Advocate<td><a href="#m16"><b>pageDisplay</b>  </a></td><td class="numi">1</td><td class="numi">21912</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Homepage<td><a href="#m17"><b>dropdownFunction</b>  </a></td><td class="numi">1</td><td class="numi">8292</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m18"><b>findLocalAssociation</b>  </a></td><td class="numi">1</td><td class="numi">15937</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Footer<td><a href="#m19"><b>shareOptions</b>  </a></td><td class="numi">1</td><td class="numi">25772</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Homepage<td><a href="#m20"><b>loadMore</b>  </a></td><td class="numi">1</td><td class="numi">29068</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m21"><b>primarynavigation</b>  </a></td><td class="numi">1</td><td class="numi">202639</td></tr>
+<tr class="passedeven"><td rowspan="2">com.velir.AccountRegistration<td><a href="#m22"><b>forgotPassword</b>  </a></td><td class="numi">1</td><td class="numi">43551</td></tr><tr class="passedeven"><td><a href="#m23"><b>login</b>  </a></td><td class="numi">1</td><td class="numi">30140</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m24"><b>logo</b>  </a></td><td class="numi">1</td><td class="numi">8836</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Shop<td><a href="#m25"><b>productsLink</b>  </a></td><td class="numi">1</td><td class="numi">16334</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Find<td><a href="#m26"><b>staffDirectory</b>  </a></td><td class="numi">1</td><td class="numi">20811</td></tr>
+<tr class="passedeven"><td rowspan="2">com.velir.Homepage<td><a href="#m27"><b>upcomingEvents</b>  </a></td><td class="numi">1</td><td class="numi">6284</td></tr><tr class="passedeven"><td><a href="#m28"><b>upcomingEventsLink</b>  </a></td><td class="numi">1</td><td class="numi">7169</td></tr>
+<tr class="passedodd"><td rowspan="2">com.velir.AccountRegistration<td><a href="#m29"><b>bookmark</b>  </a></td><td class="numi">1</td><td class="numi">79178</td></tr><tr class="passedodd"><td><a href="#m30"><b>dashboardContent</b>  </a></td><td class="numi">1</td><td class="numi">24921</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Scam<td><a href="#m31"><b>displayLogin</b>  </a></td><td class="numi">1</td><td class="numi">51925</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Bookmark<td><a href="#m32"><b>bookmarkSection</b>  </a></td><td class="numi">1</td><td class="numi">81083</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Shop<td><a href="#m33"><b>categories</b>  </a></td><td class="numi">1</td><td class="numi">5822</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m34"><b>components</b>  </a></td><td class="numi">1</td><td class="numi">18060</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m35"><b>updateProfile</b>  </a></td><td class="numi">1</td><td class="numi">69000</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Advocate<td><a href="#m36"><b>builderLink</b>  </a></td><td class="numi">1</td><td class="numi">14643</td></tr>
+<tr><th colspan="4">NAHB Tests on Firefox &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m37"><b>interestsEditProfile</b>  </a></td><td class="numi">1</td><td class="numi">47245</td></tr>
+<tr><th colspan="4">NAHB Tests on Firefox &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Shop<td><a href="#m38"><b>productsLink</b>  </a></td><td class="numi">1</td><td class="numi">13200</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Footer<td><a href="#m39"><b>linkFunction</b>  </a></td><td class="numi">1</td><td class="numi">6217</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Bookmark<td><a href="#m40"><b>bookmarking</b>  </a></td><td class="numi">1</td><td class="numi">56696</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m41"><b>updateProfile</b>  </a></td><td class="numi">1</td><td class="numi">64710</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Advocate<td><a href="#m42"><b>pageDisplay</b>  </a></td><td class="numi">1</td><td class="numi">13335</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Header<td><a href="#m43"><b>tertiaryNavigation</b>  </a></td><td class="numi">1</td><td class="numi">45296</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Learn<td><a href="#m44"><b>courseOverview</b>  </a></td><td class="numi">1</td><td class="numi">13002</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Scam<td><a href="#m45"><b>displayLogin</b>  </a></td><td class="numi">1</td><td class="numi">52123</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Footer<td><a href="#m46"><b>shareOptions</b>  </a></td><td class="numi">1</td><td class="numi">16484</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m47"><b>staffDirectory</b>  </a></td><td class="numi">1</td><td class="numi">22680</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Scam<td><a href="#m48"><b>displayLogout</b>  </a></td><td class="numi">1</td><td class="numi">14423</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Bookmark<td><a href="#m49"><b>bookmarkSection</b>  </a></td><td class="numi">1</td><td class="numi">58224</td></tr>
+<tr class="passedodd"><td rowspan="3">com.velir.AccountRegistration<td><a href="#m50"><b>dashboardContent</b>  </a></td><td class="numi">1</td><td class="numi">20619</td></tr><tr class="passedodd"><td><a href="#m51"><b>bookmark</b>  </a></td><td class="numi">1</td><td class="numi">81778</td></tr><tr class="passedodd"><td><a href="#m52"><b>toggleOnDashboard</b>  </a></td><td class="numi">1</td><td class="numi">51186</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Footer<td><a href="#m53"><b>thirdPartyLink</b>  </a></td><td class="numi">1</td><td class="numi">5986</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m54"><b>searchFunction</b>  </a></td><td class="numi">1</td><td class="numi">21304</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Homepage<td><a href="#m55"><b>dropdownFunction</b>  </a></td><td class="numi">1</td><td class="numi">7378</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Scam<td><a href="#m56"><b>nahbLogout</b>  </a></td><td class="numi">1</td><td class="numi">28976</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m57"><b>findLocalAssociation</b>  </a></td><td class="numi">1</td><td class="numi">16735</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Scam<td><a href="#m58"><b>nahbLoggedin</b>  </a></td><td class="numi">1</td><td class="numi">40947</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m59"><b>login</b>  </a></td><td class="numi">1</td><td class="numi">28200</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Advocate<td><a href="#m60"><b>builderLink</b>  </a></td><td class="numi">1</td><td class="numi">12950</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Shop<td><a href="#m61"><b>categories</b>  </a></td><td class="numi">1</td><td class="numi">5593</td></tr>
+<tr class="passedodd"><td rowspan="3">com.velir.Header<td><a href="#m62"><b>primarynavigation</b>  </a></td><td class="numi">1</td><td class="numi">63227</td></tr><tr class="passedodd"><td><a href="#m63"><b>components</b>  </a></td><td class="numi">1</td><td class="numi">13939</td></tr><tr class="passedodd"><td><a href="#m64"><b>logo</b>  </a></td><td class="numi">1</td><td class="numi">7819</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Homepage<td><a href="#m65"><b>upcomingEventsLink</b>  </a></td><td class="numi">1</td><td class="numi">6118</td></tr>
+<tr class="passedodd"><td rowspan="2">com.velir.AccountRegistration<td><a href="#m66"><b>forgotPassword</b>  </a></td><td class="numi">1</td><td class="numi">41543</td></tr><tr class="passedodd"><td><a href="#m67"><b>withoutPinCode</b>  </a></td><td class="numi">1</td><td class="numi">25726</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m68"><b>findLink</b>  </a></td><td class="numi">1</td><td class="numi">13068</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Footer<td><a href="#m69"><b>components</b>  </a></td><td class="numi">1</td><td class="numi">6300</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Homepage<td><a href="#m70"><b>upcomingEvents</b>  </a></td><td class="numi">1</td><td class="numi">5961</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Find<td><a href="#m71"><b>findExecutiveBoard</b>  </a></td><td class="numi">1</td><td class="numi">21045</td></tr>
+<tr><th colspan="4">NAHB Tests on Internet Explorer &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m72"><b>interestsEditProfile</b>  </a></td><td class="numi">1</td><td class="numi">49277</td></tr>
+<tr class="failedeven"><td rowspan="1">com.velir.Footer<td><a href="#m73"><b>linkFunction</b>  </a></td><td class="numi">1</td><td class="numi">6070</td></tr>
+<tr class="failedodd"><td rowspan="1">com.velir.Scam<td><a href="#m74"><b>nahbLoggedin</b>  </a></td><td class="numi">1</td><td class="numi">65344</td></tr>
+<tr class="failedeven"><td rowspan="1">com.velir.Footer<td><a href="#m75"><b>thirdPartyLink</b>  </a></td><td class="numi">1</td><td class="numi">6367</td></tr>
+<tr><th colspan="4">NAHB Tests on Internet Explorer &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Homepage<td><a href="#m76"><b>upcomingEvents</b>  </a></td><td class="numi">1</td><td class="numi">6495</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Shop<td><a href="#m77"><b>categories</b>  </a></td><td class="numi">1</td><td class="numi">7831</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m78"><b>searchFunction</b>  </a></td><td class="numi">1</td><td class="numi">26253</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m79"><b>findLocalAssociation</b>  </a></td><td class="numi">1</td><td class="numi">18219</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Footer<td><a href="#m80"><b>components</b>  </a></td><td class="numi">1</td><td class="numi">9032</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Header<td><a href="#m81"><b>logo</b>  </a></td><td class="numi">1</td><td class="numi">8966</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Scam<td><a href="#m82"><b>displayLogin</b>  </a></td><td class="numi">1</td><td class="numi">54682</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Find<td><a href="#m83"><b>staffDirectory</b>  </a></td><td class="numi">1</td><td class="numi">19726</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m84"><b>forgotPassword</b>  </a></td><td class="numi">1</td><td class="numi">43778</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Header<td><a href="#m85"><b>primarynavigation</b>  </a></td><td class="numi">1</td><td class="numi">103918</td></tr>
+<tr class="passedodd"><td rowspan="2">com.velir.Find<td><a href="#m86"><b>findExecutiveBoard</b>  </a></td><td class="numi">1</td><td class="numi">23013</td></tr><tr class="passedodd"><td><a href="#m87"><b>findLink</b>  </a></td><td class="numi">1</td><td class="numi">15431</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Homepage<td><a href="#m88"><b>loadMore</b>  </a></td><td class="numi">1</td><td class="numi">31077</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m89"><b>bookmark</b>  </a></td><td class="numi">1</td><td class="numi">90122</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Advocate<td><a href="#m90"><b>builderLink</b>  </a></td><td class="numi">1</td><td class="numi">15515</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Homepage<td><a href="#m91"><b>dropdownFunction</b>  </a></td><td class="numi">1</td><td class="numi">10492</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m92"><b>toggleOnDashboard</b>  </a></td><td class="numi">1</td><td class="numi">52861</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Homepage<td><a href="#m93"><b>upcomingEventsLink</b>  </a></td><td class="numi">1</td><td class="numi">9636</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Bookmark<td><a href="#m94"><b>bookmarking</b>  </a></td><td class="numi">1</td><td class="numi">60730</td></tr>
+<tr class="passedodd"><td rowspan="2">com.velir.Scam<td><a href="#m95"><b>nahbLogout</b>  </a></td><td class="numi">1</td><td class="numi">252481</td></tr><tr class="passedodd"><td><a href="#m96"><b>displayLogout</b>  </a></td><td class="numi">1</td><td class="numi">11902</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m97"><b>withoutPinCode</b>  </a></td><td class="numi">1</td><td class="numi">29003</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Bookmark<td><a href="#m98"><b>bookmarkSection</b>  </a></td><td class="numi">1</td><td class="numi">60390</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Header<td><a href="#m99"><b>components</b>  </a></td><td class="numi">1</td><td class="numi">14843</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Advocate<td><a href="#m100"><b>pageDisplay</b>  </a></td><td class="numi">1</td><td class="numi">16808</td></tr>
+<tr class="passedeven"><td rowspan="2">com.velir.AccountRegistration<td><a href="#m101"><b>dashboardContent</b>  </a></td><td class="numi">1</td><td class="numi">20625</td></tr><tr class="passedeven"><td><a href="#m102"><b>login</b>  </a></td><td class="numi">1</td><td class="numi">29989</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Header<td><a href="#m103"><b>tertiaryNavigation</b>  </a></td><td class="numi">1</td><td class="numi">61251</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Footer<td><a href="#m104"><b>shareOptions</b>  </a></td><td class="numi">1</td><td class="numi">17898</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.AccountRegistration<td><a href="#m105"><b>updateProfile</b>  </a></td><td class="numi">1</td><td class="numi">74328</td></tr>
+<tr class="passedeven"><td rowspan="1">com.velir.Learn<td><a href="#m106"><b>courseOverview</b>  </a></td><td class="numi">1</td><td class="numi">16650</td></tr>
+<tr class="passedodd"><td rowspan="1">com.velir.Shop<td><a href="#m107"><b>productsLink</b>  </a></td><td class="numi">1</td><td class="numi">16499</td></tr>
 </table>
-<h1>NAHBAutomation</h1>
-<a id="m1"></a><h2>com.velir.Scam:nahbLogout</h2>
+<h1>NAHB Tests on Chrome</h1>
+<a id="m1"></a><h2>com.velir.Find:findExecutiveBoard</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for presence of element located by: By.id: contentregion_0_txtUserName (tried for 25 second(s) with 500 MILLISECONDS interval)
+<h3>Test Messages</h3>
+<b>Mon Feb 27 14:59:51 EST 2017 :: </b>[Last Name, First Name]<br><br/>
+<h3>Failure</h3>
+<p>expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.testng.Assert.assertTrue(Assert.java:47)
+<br/>at com.velir.Find.findExecutiveBoard(Find.java:42)
+<br/>31 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>com.velir.AccountRegistration:interestsEditProfile</h2>
+<div style="padding-left:3em">
+<p>expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.testng.Assert.assertTrue(Assert.java:47)
+<br/>at com.velir.AccountRegistration.interestsEditProfile(AccountRegistration.java:267)
+<br/>31 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>com.velir.AccountRegistration:toggleOnDashboard</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>com.velir.Scam:nahbLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>com.velir.Footer:components</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>com.velir.Header:tertiaryNavigation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>com.velir.Scam:nahbLoggedin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>com.velir.Find:findLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:00:16 EST 2017 :: </b>[Award Programs, Committee Members, Council Members, Designees, Local Associations, Meetings and Events]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>com.velir.Header:searchFunction</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>com.velir.Footer:linkFunction</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:01:29 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/find/directory-executiveofficers.aspx, http://regression.cd.nahb.velir.com/en/find/directory-hba.aspx, null, http://regression.cd.nahb.velir.com/en/find/award-programs.aspx, http://regression.cd.nahb.velir.com/en/about-nahb/social-and-media/online-advertising-opportunities-to-reach-builders.aspx]<br><br/>
+<b>Mon Feb 27 15:01:29 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/research/nahb-priorities.aspx, http://regression.cd.nahb.velir.com/en/research/housing-economics.aspx, http://regression.cd.nahb.velir.com/en/research/legal-issues.aspx, null, http://regression.cd.nahb.velir.com/en/research/design.aspx]<br><br/>
+<b>Mon Feb 27 15:01:30 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/learn/designations.aspx, http://regression.cd.nahb.velir.com/en/learn/course-overviews.aspx, http://regression.cd.nahb.velir.com/en/learn/education-calendar.aspx, http://regression.cd.nahb.velir.com/en/learn/education-articles/apply-online-to-become-an-nahb-approved-instructor.aspx]<br><br/>
+<b>Mon Feb 27 15:01:30 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/advocate/builderlink.aspx, null, http://regression.cd.nahb.velir.com/en/advocate/partners-for-housing.aspx, http://regression.cd.nahb.velir.com/en/advocate/policy-resolutions.aspx]<br><br/>
+<b>Mon Feb 27 15:01:30 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/Terms-of-Service.aspx, http://regression.cd.nahb.velir.com/en/privacy-policy.aspx]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>com.velir.Scam:displayLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>com.velir.Footer:thirdPartyLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:02:11 EST 2017 :: </b>[null, http://buildersshow.com/Home/, http://www.nationalhousingendowment.org/, http://www.hbi.org/, http://www.homeinnovation.com/, http://regression.cd.nahb.velir.com/en/industry-professionals/international-housing-association.aspx, http://www.bestinamericanliving.com/, http://www.nahbclassic.org/showpage_details.aspx?showpageID=311?userid={0}]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>com.velir.Learn:courseOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>com.velir.Bookmark:bookmarking</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>com.velir.AccountRegistration:withoutPinCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>com.velir.Advocate:pageDisplay</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 14:56:43 EST 2017 :: </b>[BuilderLink
+Contact your members of Congress with this useful NAHB tool. Let them know how you feel about issues of importance to the home building industry. Find out more>, A Letter from Chief Lobbyist Jim Tobin
+As Congress gets ready for its year-end adjournment, there are still many legislative initiatives left on the table that can make or break a healthy environment for housing. That’s why it’s time for a full-court press, explains NAHB Chief Lobbyist Jim Tobin. Read more>]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>com.velir.Homepage:dropdownFunction</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:08:07 EST 2017 :: </b>[All Topics, Design, Economic Data, Education, Environment, Flood Insurance, Housing Finance, Multifamily, Remodeling, Safety, Workforce]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>com.velir.Find:findLocalAssociation</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:00:32 EST 2017 :: </b>[Local Number]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>com.velir.Footer:shareOptions</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m20"></a><h2>com.velir.Homepage:loadMore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m21"></a><h2>com.velir.Header:primarynavigation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m22"></a><h2>com.velir.AccountRegistration:forgotPassword</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m23"></a><h2>com.velir.AccountRegistration:login</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m24"></a><h2>com.velir.Header:logo</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m25"></a><h2>com.velir.Shop:productsLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:12:57 EST 2017 :: </b>[Featured Products, New Arrivals, Product Categories]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m26"></a><h2>com.velir.Find:staffDirectory</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:00:56 EST 2017 :: </b>[Name:, Department:, Phone:]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m27"></a><h2>com.velir.Homepage:upcomingEvents</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m28"></a><h2>com.velir.Homepage:upcomingEventsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m29"></a><h2>com.velir.AccountRegistration:bookmark</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m30"></a><h2>com.velir.AccountRegistration:dashboardContent</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 14:50:48 EST 2017 :: </b>[BRYAN, TX, qaqa4@yopmail.com, NAHB PIN: 1548675, Spike Credits: 0.00]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m31"></a><h2>com.velir.Scam:displayLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m32"></a><h2>com.velir.Bookmark:bookmarkSection</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m33"></a><h2>com.velir.Shop:categories</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:12:35 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/Products/Education.aspx, http://regression.cd.nahb.velir.com/en/Products/Events.aspx, http://regression.cd.nahb.velir.com/en/Products/IBS-recordings.aspx, http://regression.cd.nahb.velir.com/en/Products/Memberships.aspx, http://regression.cd.nahb.velir.com/en/Products/Miscellaneous.aspx, http://regression.cd.nahb.velir.com/en/Products/Publications.aspx, http://regression.cd.nahb.velir.com/en/Products/Webinars.aspx, http://regression.cd.nahb.velir.com/en/Products/Builder%20Books.aspx]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m34"></a><h2>com.velir.Header:components</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:02:27 EST 2017 :: </b>[About NAHB, BuilderBooks, HBA Resources, How To Join, Shop, (0)]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m35"></a><h2>com.velir.AccountRegistration:updateProfile</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m36"></a><h2>com.velir.Advocate:builderLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>NAHB Tests on Firefox</h1>
+<a id="m37"></a><h2>com.velir.AccountRegistration:interestsEditProfile</h2>
+<div style="padding-left:3em">
+<p>expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.testng.Assert.assertTrue(Assert.java:47)
+<br/>at com.velir.AccountRegistration.interestsEditProfile(AccountRegistration.java:267)
+<br/>31 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m38"></a><h2>com.velir.Shop:productsLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:30:51 EST 2017 :: </b>[Featured Products, New Arrivals, Product Categories]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m39"></a><h2>com.velir.Footer:linkFunction</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:23:51 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/find/directory-executiveofficers.aspx, http://regression.cd.nahb.velir.com/en/find/directory-hba.aspx, null, http://regression.cd.nahb.velir.com/en/find/award-programs.aspx, http://regression.cd.nahb.velir.com/en/about-nahb/social-and-media/online-advertising-opportunities-to-reach-builders.aspx]<br><br/>
+<b>Mon Feb 27 15:23:51 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/research/nahb-priorities.aspx, http://regression.cd.nahb.velir.com/en/research/housing-economics.aspx, http://regression.cd.nahb.velir.com/en/research/legal-issues.aspx, null, http://regression.cd.nahb.velir.com/en/research/design.aspx]<br><br/>
+<b>Mon Feb 27 15:23:51 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/learn/designations.aspx, http://regression.cd.nahb.velir.com/en/learn/course-overviews.aspx, http://regression.cd.nahb.velir.com/en/learn/education-calendar.aspx, http://regression.cd.nahb.velir.com/en/learn/education-articles/apply-online-to-become-an-nahb-approved-instructor.aspx]<br><br/>
+<b>Mon Feb 27 15:23:51 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/advocate/builderlink.aspx, null, http://regression.cd.nahb.velir.com/en/advocate/partners-for-housing.aspx, http://regression.cd.nahb.velir.com/en/advocate/policy-resolutions.aspx]<br><br/>
+<b>Mon Feb 27 15:23:51 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/Terms-of-Service.aspx, http://regression.cd.nahb.velir.com/en/privacy-policy.aspx]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m40"></a><h2>com.velir.Bookmark:bookmarking</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m41"></a><h2>com.velir.AccountRegistration:updateProfile</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m42"></a><h2>com.velir.Advocate:pageDisplay</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:20:02 EST 2017 :: </b>[BuilderLink
+Contact your members of Congress with this useful NAHB tool. Let them know how you feel about issues of importance to the home building industry. Find out more>, A Letter from Chief Lobbyist Jim Tobin
+As Congress gets ready for its year-end adjournment, there are still many legislative initiatives left on the table that can make or break a healthy environment for housing. That’s why it’s time for a full-court press, explains NAHB Chief Lobbyist Jim Tobin. Read more>]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m43"></a><h2>com.velir.Header:tertiaryNavigation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m44"></a><h2>com.velir.Learn:courseOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m45"></a><h2>com.velir.Scam:displayLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m46"></a><h2>com.velir.Footer:shareOptions</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m47"></a><h2>com.velir.Find:staffDirectory</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:23:22 EST 2017 :: </b>[Name:, Department:, Phone:]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m48"></a><h2>com.velir.Scam:displayLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m49"></a><h2>com.velir.Bookmark:bookmarkSection</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m50"></a><h2>com.velir.AccountRegistration:dashboardContent</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:14:50 EST 2017 :: </b>[BRYAN, TX, qaqa4@yopmail.com, NAHB PIN: 1548675, Spike Credits: 0.00]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m51"></a><h2>com.velir.AccountRegistration:bookmark</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m52"></a><h2>com.velir.AccountRegistration:toggleOnDashboard</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m53"></a><h2>com.velir.Footer:thirdPartyLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:24:20 EST 2017 :: </b>[null, http://buildersshow.com/Home/, http://www.nationalhousingendowment.org/, http://www.hbi.org/, http://www.homeinnovation.com/, http://regression.cd.nahb.velir.com/en/industry-professionals/international-housing-association.aspx, http://www.bestinamericanliving.com/, http://www.nahbclassic.org/showpage_details.aspx?showpageID=311?userid={0}]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m54"></a><h2>com.velir.Header:searchFunction</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m55"></a><h2>com.velir.Homepage:dropdownFunction</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:27:19 EST 2017 :: </b>[All Topics, Design, Economic Data, Education, Environment, Flood Insurance, Housing Finance, Multifamily, Remodeling, Safety, Workforce]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m56"></a><h2>com.velir.Scam:nahbLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m57"></a><h2>com.velir.Find:findLocalAssociation</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:22:59 EST 2017 :: </b>[Local Number]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m58"></a><h2>com.velir.Scam:nahbLoggedin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m59"></a><h2>com.velir.AccountRegistration:login</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m60"></a><h2>com.velir.Advocate:builderLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m61"></a><h2>com.velir.Shop:categories</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:30:34 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/Products/Education.aspx, http://regression.cd.nahb.velir.com/en/Products/Events.aspx, http://regression.cd.nahb.velir.com/en/Products/IBS-recordings.aspx, http://regression.cd.nahb.velir.com/en/Products/Memberships.aspx, http://regression.cd.nahb.velir.com/en/Products/Miscellaneous.aspx, http://regression.cd.nahb.velir.com/en/Products/Publications.aspx, http://regression.cd.nahb.velir.com/en/Products/Webinars.aspx, http://regression.cd.nahb.velir.com/en/Products/Builder%20Books.aspx]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m62"></a><h2>com.velir.Header:primarynavigation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m63"></a><h2>com.velir.Header:components</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:24:30 EST 2017 :: </b>[About NAHB, BuilderBooks, HBA Resources, How To Join, Shop, (0)]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m64"></a><h2>com.velir.Header:logo</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m65"></a><h2>com.velir.Homepage:upcomingEventsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m66"></a><h2>com.velir.AccountRegistration:forgotPassword</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m67"></a><h2>com.velir.AccountRegistration:withoutPinCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m68"></a><h2>com.velir.Find:findLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:22:45 EST 2017 :: </b>[Award Programs, Committee Members, Council Members, Designees, Local Associations, Meetings and Events]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m69"></a><h2>com.velir.Footer:components</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m70"></a><h2>com.velir.Homepage:upcomingEvents</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m71"></a><h2>com.velir.Find:findExecutiveBoard</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:22:19 EST 2017 :: </b>[Last Name, First Name]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>NAHB Tests on Internet Explorer</h1>
+<a id="m72"></a><h2>com.velir.AccountRegistration:interestsEditProfile</h2>
+<div style="padding-left:3em">
+<p>expected:&lt;true&gt; but was:&lt;false&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertTrue(Assert.java:37)
+<br/>at org.testng.Assert.assertTrue(Assert.java:47)
+<br/>at com.velir.AccountRegistration.interestsEditProfile(AccountRegistration.java:267)
+<br/>31 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m73"></a><h2>com.velir.Footer:linkFunction</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+<b>Mon Feb 27 15:42:19 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/find/directory-executiveofficers.aspx, http://regression.cd.nahb.velir.com/en/find/directory-hba.aspx, http://regression.cd.nahb.velir.com/en/members/committees-and-councils.aspx, http://regression.cd.nahb.velir.com/en/find/award-programs.aspx, http://regression.cd.nahb.velir.com/en/about-nahb/social-and-media/online-advertising-opportunities-to-reach-builders.aspx]<br><br/>
+<h3>Failure</h3>
+<p>Lists differ at element [2]: null != http://regression.cd.nahb.velir.com/en/members/committees-and-councils.aspx expected:&lt;null&gt; but was:&lt;http://regression.cd.nahb.velir.com/en/members/committees-and-councils.aspx&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertEquals(Assert.java:118)
+<br/>at org.testng.Assert.assertEquals(Assert.java:544)
+<br/>at org.testng.Assert.assertEquals(Assert.java:509)
+<br/>at com.velir.Footer.linkFunction(Footer.java:104)
+<br/>31 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m74"></a><h2>com.velir.Scam:nahbLoggedin</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for presence of element located by: By.partialLinkText: Purchase Student Chapter Alumni Membership (tried for 25 second(s) with 500 MILLISECONDS interval)
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
 System info: host: &apos;VWWin7NoD&apos;, ip: &apos;172.20.10.80&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\Ishan\AppData\Local\Temp\scoped_dir6876_26090}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c00953624feec46ce5fa8e66cc199a9</p>
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, pageLoadStrategy=normal, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:3546/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 99246a6b-568f-47cf-9562-a5a0deda6be2</p>
 org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
 <br/>at com.velir.utilities.Helper.waitTillElementLocated(Helper.java:40)
-<br/>at com.velir.utilities.Helper.sendKeys(Helper.java:225)
-<br/>at com.velir.pageobject.GeneralPage.loginRepeat(GeneralPage.java:28)
-<br/>at com.velir.Scam.nahbLogout(Scam.java:100)
+<br/>at com.velir.utilities.Helper.click(Helper.java:198)
+<br/>at com.velir.Scam.nahbLoggedin(Scam.java:136)
 <br/>31 lines not shown
-<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;contentregion_0_txtUserName&quot;}
-  (Session info: chrome=56.0.2924.87)
-  (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 6.1.7601 SP1 x86) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 6 milliseconds
+<p>Caused by Unable to find element with partial link text == Purchase Student Chapter Alumni Membership (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 436 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
 System info: host: &apos;VWWin7NoD&apos;, ip: &apos;172.20.10.80&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\Ishan\AppData\Local\Temp\scoped_dir6876_26090}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c00953624feec46ce5fa8e66cc199a9
-*** Element info: {Using=id, value=contentregion_0_txtUserName}</p>
-sun.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, pageLoadStrategy=normal, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:3546/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 99246a6b-568f-47cf-9562-a5a0deda6be2
+*** Element info: {Using=partial link text, value=Purchase Student Chapter Alumni Membership}</p>
+sun.reflect.GeneratedConstructorAccessor12.newInstance(Unknown Source)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 <br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
 <br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
 <br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByPartialLinkText(RemoteWebDriver.java:433)
+<br/>at org.openqa.selenium.By$ByPartialLinkText.findElement(By.java:273)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
@@ -80,22 +462,120 @@ sun.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
 <br/>at com.velir.utilities.Helper.waitTillElementLocated(Helper.java:40)
-<br/>at com.velir.utilities.Helper.sendKeys(Helper.java:225)
-<br/>at com.velir.pageobject.GeneralPage.loginRepeat(GeneralPage.java:28)
-<br/>at com.velir.Scam.nahbLogout(Scam.java:100)
+<br/>at com.velir.utilities.Helper.click(Helper.java:198)
+<br/>at com.velir.Scam.nahbLoggedin(Scam.java:136)
 <br/>31 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m2"></a><h2>com.velir.Scam:nahbLoggedin</h2>
+<a id="m75"></a><h2>com.velir.Footer:thirdPartyLink</h2>
 <div style="padding-left:3em">
-<p>expected:&lt;Verify and Update Your Profile&gt; but was:&lt;Student Chapter Alumni Member&gt;</p>
+<h3>Test Messages</h3>
+<b>Mon Feb 27 15:42:49 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/members/hba-resources.aspx, http://buildersshow.com/Home/, http://www.nationalhousingendowment.org/, http://www.hbi.org/, http://www.homeinnovation.com/, http://regression.cd.nahb.velir.com/en/industry-professionals/international-housing-association.aspx, http://www.bestinamericanliving.com/, http://www.nahbclassic.org/showpage_details.aspx?showpageID=311?userid={0}]<br><br/>
+<h3>Failure</h3>
+<p>Lists differ at element [0]: null != http://regression.cd.nahb.velir.com/en/members/hba-resources.aspx expected:&lt;null&gt; but was:&lt;http://regression.cd.nahb.velir.com/en/members/hba-resources.aspx&gt;</p>
 org.testng.Assert.fail(Assert.java:89)
 <br/>at org.testng.Assert.failNotEquals(Assert.java:489)
 <br/>at org.testng.Assert.assertEquals(Assert.java:118)
-<br/>at org.testng.Assert.assertEquals(Assert.java:171)
-<br/>at org.testng.Assert.assertEquals(Assert.java:181)
-<br/>at com.velir.Scam.nahbLoggedin(Scam.java:136)
+<br/>at org.testng.Assert.assertEquals(Assert.java:544)
+<br/>at org.testng.Assert.assertEquals(Assert.java:509)
+<br/>at com.velir.Footer.thirdPartyLink(Footer.java:167)
 <br/>31 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m76"></a><h2>com.velir.Homepage:upcomingEvents</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m77"></a><h2>com.velir.Shop:categories</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:54:51 EST 2017 :: </b>[http://regression.cd.nahb.velir.com/en/Products/Education.aspx, http://regression.cd.nahb.velir.com/en/Products/Events.aspx, http://regression.cd.nahb.velir.com/en/Products/IBS-recordings.aspx, http://regression.cd.nahb.velir.com/en/Products/Memberships.aspx, http://regression.cd.nahb.velir.com/en/Products/Miscellaneous.aspx, http://regression.cd.nahb.velir.com/en/Products/Publications.aspx, http://regression.cd.nahb.velir.com/en/Products/Webinars.aspx, http://regression.cd.nahb.velir.com/en/Products/Builder%20Books.aspx]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m78"></a><h2>com.velir.Header:searchFunction</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m79"></a><h2>com.velir.Find:findLocalAssociation</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:41:29 EST 2017 :: </b>[Local Number]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m80"></a><h2>com.velir.Footer:components</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m81"></a><h2>com.velir.Header:logo</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m82"></a><h2>com.velir.Scam:displayLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m83"></a><h2>com.velir.Find:staffDirectory</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:41:49 EST 2017 :: </b>[Name:, Department:, Phone:]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m84"></a><h2>com.velir.AccountRegistration:forgotPassword</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m85"></a><h2>com.velir.Header:primarynavigation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m86"></a><h2>com.velir.Find:findExecutiveBoard</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:40:46 EST 2017 :: </b>[Last Name, First Name]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m87"></a><h2>com.velir.Find:findLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:41:15 EST 2017 :: </b>[Award Programs, Committee Members, Council Members, Designees, Local Associations, Meetings and Events]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m88"></a><h2>com.velir.Homepage:loadMore</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m89"></a><h2>com.velir.AccountRegistration:bookmark</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m90"></a><h2>com.velir.Advocate:builderLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m91"></a><h2>com.velir.Homepage:dropdownFunction</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:46:49 EST 2017 :: </b>[All Topics, Design, Economic Data, Education, Environment, Flood Insurance, Housing Finance, Multifamily, Remodeling, Safety, Workforce]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m92"></a><h2>com.velir.AccountRegistration:toggleOnDashboard</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m93"></a><h2>com.velir.Homepage:upcomingEventsLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m94"></a><h2>com.velir.Bookmark:bookmarking</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m95"></a><h2>com.velir.Scam:nahbLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m96"></a><h2>com.velir.Scam:displayLogout</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m97"></a><h2>com.velir.AccountRegistration:withoutPinCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m98"></a><h2>com.velir.Bookmark:bookmarkSection</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m99"></a><h2>com.velir.Header:components</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:42:59 EST 2017 :: </b>[About NAHB, BuilderBooks, HBA Resources, How To Join, Shop, (0)]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m100"></a><h2>com.velir.Advocate:pageDisplay</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:38:24 EST 2017 :: </b>[BuilderLink
+Contact your members of Congress with this useful NAHB tool. Let them know how you feel about issues of importance to the home building industry. Find out more>, A Letter from Chief Lobbyist Jim Tobin
+As Congress gets ready for its year-end adjournment, there are still many legislative initiatives left on the table that can make or break a healthy environment for housing. That’s why it’s time for a full-court press, explains NAHB Chief Lobbyist Jim Tobin. Read more>]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m101"></a><h2>com.velir.AccountRegistration:dashboardContent</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:32:52 EST 2017 :: </b>[BRYAN, TX, qaqa4@yopmail.com, NAHB PIN: 1548675, Spike Credits: 0.00]<br><br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m102"></a><h2>com.velir.AccountRegistration:login</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m103"></a><h2>com.velir.Header:tertiaryNavigation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m104"></a><h2>com.velir.Footer:shareOptions</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m105"></a><h2>com.velir.AccountRegistration:updateProfile</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m106"></a><h2>com.velir.Learn:courseOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m107"></a><h2>com.velir.Shop:productsLink</h2>
+<div style="padding-left:3em">
+<b>Mon Feb 27 15:55:11 EST 2017 :: </b>[Featured Products, New Arrivals, Product Categories]<br><br/>
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
