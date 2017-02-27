@@ -19,7 +19,9 @@ public class Find extends SetupClass {
         helper.getURL(ENV + "/en/find/directory-executiveboard.aspx");
 
         helper.waitForSeconds(4);
-        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Result 1 of 10"));
+
+
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-10 of"));
 
         Assert.assertEquals(driver.findElements(By.cssSelector(".coveo-caption")).size(), 10);
 
@@ -34,16 +36,14 @@ public class Find extends SetupClass {
 
         Assert.assertEquals(driver.findElements(By.cssSelector(".CoveoPager>ul>li")).size(), 11);
 
-
-        helper.click(By.xpath(".//div[2]/ul/li[5]/label/div/span[1]"));
-        helper.waitForSeconds(4);
-        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-5 of 5"));
-
-
         Assert.assertFalse(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
         helper.click(By.xpath(".//div[2]/div[2]/span"));
         helper.waitForSeconds(4);
         Assert.assertTrue(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
+
+        helper.click(By.xpath(".//div[2]/ul/li[5]/label/div/span[1]"));
+        helper.waitForSeconds(4);
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-5 of 5"));
 
 
 
@@ -57,7 +57,7 @@ public class Find extends SetupClass {
         helper.getURL(ENV + "/en/find/directory-hba.aspx");
         helper.waitForSeconds(4);
 
-        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Result 1 of 10"));
+        Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-10 of"));
 
         Assert.assertEquals(driver.findElements(By.cssSelector(".coveo-caption")).size(), 15);
 
@@ -71,15 +71,10 @@ public class Find extends SetupClass {
         Assert.assertEquals(driver.findElements(By.cssSelector(".CoveoPager>ul>li")).size(), 11);
 
 
-        helper.click(By.xpath(".//div[2]/ul/li[5]/label/div/span[1]"));
+        helper.click(By.xpath("//div[3]/div[2]/ul/li[5]/label/div/span[1]"));
         helper.waitForSeconds(4);
         Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-4 of 4"));
 
-
-        Assert.assertFalse(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
-        helper.click(By.xpath(".//div[2]/div[2]/span"));
-        helper.waitForSeconds(4);
-        Assert.assertTrue(helper.getElementText(By.xpath(".//*[@id='box1']/div[1]/p[1]")).contains("Name: A"));
 
         Assert.assertTrue(driver.findElement(By.xpath("//div[1]/div[2]/h1")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath(".//*[@id='submitSearchCityBtn']")).isDisplayed());
@@ -97,6 +92,18 @@ public class Find extends SetupClass {
 
         helper.getURL(ENV + "/en/find/directory-nahbstaff.aspx");
         helper.waitForSeconds(4);
+
+        List<String> actualValues = helper.getElementsText(By.xpath(".//*[@id='box2']/div[1]/p/strong"));
+        helper.log(actualValues);
+        List<String> expectedValues= Arrays.asList("Name:","Department:","Phone:");
+        Assert.assertEquals(actualValues, expectedValues);
+
+
+        Assert.assertFalse(helper.isElementDisplayed(By.xpath(".//*[@id='box2']/div[2]/p[4]/a")));
+
+        helper.click(By.xpath(".//*[@id='box2']/div[1]/a/label"));
+
+        Assert.assertTrue(helper.isElementDisplayed(By.xpath(".//*[@id='box2']/div[2]/p[4]/a")));
 
     }
 
