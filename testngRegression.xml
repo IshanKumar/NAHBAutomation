@@ -10,12 +10,15 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Advocate"/>
             <class name="com.velir.Bookmark"/>
             <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
             <class name="com.velir.Header"/>
             <class name="com.velir.Homepage"/>
             <class name="com.velir.Learn"/>
+            <class name="com.velir.Scam"/>
+            <class name="com.velir.Shop"/>
         </classes>
     </test>
 
@@ -25,6 +28,7 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Advocate"/>
             <class name="com.velir.Bookmark"/>
             <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
@@ -35,6 +39,8 @@
                 </methods>
             </class>
             <class name="com.velir.Learn"/>
+            <class name="com.velir.Scam"/>
+            <class name="com.velir.Shop"/>
         </classes>
     </test>
 
@@ -44,12 +50,15 @@
 
         <classes>
             <class name="com.velir.AccountRegistration"/>
+            <class name="com.velir.Advocate"/>
             <class name="com.velir.Bookmark"/>
             <class name="com.velir.Find"/>
             <class name="com.velir.Footer"/>
             <class name="com.velir.Header"/>
             <class name="com.velir.Homepage"/>
             <class name="com.velir.Learn"/>
+            <class name="com.velir.Scam"/>
+            <class name="com.velir.Shop"/>
         </classes>
     </test>
 

@@ -86,12 +86,15 @@ public class Scam extends SetupClass {
 
         helper.click(By.cssSelector("#submitSearchZipBtn"));
 
-        helper.click(By.xpath(".//*[@id='box1']/div[1]/p[3]"));
+        helper.waitForSeconds(4);
+
+        helper.click(By.partialLinkText("Purchase Student Chapter Alumni Membership"));
 
         GeneralPage page = new GeneralPage(driver);
 
         page.loginRepeat(configuration.getString("emailAddress1"), "Pass12345");
 
+        helper.waitForSeconds(2);
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "Verify and Update Your Profile");
 
@@ -121,10 +124,13 @@ public class Scam extends SetupClass {
 
         helper.click(By.cssSelector("#submitSearchZipBtn"));
 
-        helper.click(By.xpath(".//*[@id='box1']/div[1]/p[3]"));
+        helper.waitForSeconds(4);
+
+        helper.click(By.partialLinkText("Purchase Student Chapter Alumni Membership"));
 
 
 
+        helper.waitForSeconds(2);
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "Verify and Update Your Profile");
 
