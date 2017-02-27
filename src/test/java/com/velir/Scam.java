@@ -16,6 +16,8 @@ import java.util.List;
 public class Scam extends SetupClass {
 
 
+    public GeneralPage page;
+
     @Test
     public void displayLogout() {
 
@@ -45,18 +47,9 @@ public class Scam extends SetupClass {
     @Test
     public void displayLogin() {
 
-
         helper.getURL(ENV + "/login?NoReferrer=1");
-
-        helper.waitForSeconds(4);
-
-        helper.sendKeys(By.id("contentregion_0_txtUserName"), "qaqa4@yopmail.com");
-
-        helper.sendKeys(By.id("contentregion_0_txtPassword"), "Pass12345");
-
-        helper.click(By.id("contentregion_0_btnSubmit"));
-
-        helper.waitForSeconds(4);
+        page = new GeneralPage(driver);
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
 
         helper.getURL(ENV + "/en/find/Student Chapter Alumni Member.aspx");
@@ -137,6 +130,34 @@ public class Scam extends SetupClass {
 
         Assert.assertEquals(helper.getElementText(By.cssSelector("#contentregion_0_btnSave")),"Update & Continue");
 
+
+
+    }
+
+
+    @Test
+    public void notEligibletoNAHB() {
+
+        helper.getURL(ENV + "/login?NoReferrer=1");
+        page = new GeneralPage(driver);
+        page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
+
+
+        helper.getURL(ENV + "/en/find/Student Chapter Alumni Member.aspx");
+        helper.sendKeys(By.cssSelector("#zip"), "10001");
+        helper.click(By.cssSelector("#submitSearchZipBtn"));
+
+        helper.waitForSeconds(4);
+        helper.click(By.partialLinkText("Purchase Student Chapter Alumni Membership"));
+        helper.waitForSeconds(2);
+
+        helper.sendKeys(By.id("contentregion_0_txtEmail2"), configuration.getString("emailAddress2"));
+        helper.click(By.id("contentregion_0_btnSave"));
+        helper.waitForSeconds(4);
+
+        Assert.assertEquals(helper.getElementText(By.cssSelector(".head>h1")), "You Might Be Eligible to Join Local Associations");
+        Assert.assertEquals(driver.getCurrentUrl(),ENV+"/en/scam_not_eligible.aspx");
+        Assert.assertEquals(helper.getElementText(By.cssSelector("#header-cart-count")),"0");
 
 
     }

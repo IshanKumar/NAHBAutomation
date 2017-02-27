@@ -254,7 +254,6 @@ public class AccountRegistration extends SetupClass {
 
         helper.getURL(ENV + "/login?NoReferrer=1");
         page = new GeneralPage(driver);
-
         page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
 
