@@ -18,7 +18,7 @@ public class Find extends SetupClass {
 
         helper.getURL(ENV + "/en/find/directory-executiveboard.aspx");
 
-        helper.waitForSeconds(4);
+        helper.waitForSeconds(6);
 
 
         Assert.assertTrue(helper.getElementText(By.cssSelector(".CoveoQuerySummary>span")).contains("Results 1-10 of"));

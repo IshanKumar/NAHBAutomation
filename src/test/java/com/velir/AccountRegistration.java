@@ -130,6 +130,7 @@ public class AccountRegistration extends SetupClass {
 
         page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
+        helper.waitForSeconds(6);
         Assert.assertTrue(helper.isElementDisplayed(By.cssSelector(".bookmarks")));
 
 

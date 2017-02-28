@@ -82,9 +82,9 @@ public class SetupClass {
 
 
 
-//    @AfterMethod
-//    public void closeBrowser(){ //to close and quit browser
-//        driver.close();
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void closeBrowser(){ //to close and quit browser
+        driver.close();
+        driver.quit();
+    }
 }
