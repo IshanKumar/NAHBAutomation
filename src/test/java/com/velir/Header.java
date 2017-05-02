@@ -106,9 +106,9 @@ public class Header extends SetupClass {
 
             helper.waitForSeconds(2);
 
-            secondaryRepeater(By.cssSelector(".cyan>li:nth-child(1)>div:nth-child(3)>div:nth-child(2)>ul:nth-child(1)>li:nth-child(2)>a:nth-child(1)"));
-            secondaryRepeater(By.cssSelector(".cyan>li:nth-child(1)>div:nth-child(3)>div:nth-child(2)>ul:nth-child(1)>li:nth-child(4)>a:nth-child(1)"));
+           // secondaryRepeater(By.cssSelector(".cyan>li:nth-child(1)>div:nth-child(3)>div:nth-child(2)>ul:nth-child(1)>li:nth-child(2)>a:nth-child(1)"));
             secondaryRepeater(By.cssSelector(".cyan>li:nth-child(1)>div:nth-child(3)>div:nth-child(2)>ul:nth-child(1)>li:nth-child(5)>a:nth-child(1)"));
+            secondaryRepeater(By.cssSelector(".cyan>li:nth-child(1)>div:nth-child(3)>div:nth-child(2)>ul:nth-child(1)>li:nth-child(6)>a:nth-child(1)"));
 
         }
 

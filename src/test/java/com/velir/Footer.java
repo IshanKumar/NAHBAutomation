@@ -26,7 +26,7 @@ public class Footer extends SetupClass {
                 "Washington, DC 20005\n" +
                 "Toll free: 1-800-368-5242", "© 2015. All rights reserved.");
 
-        List<String> expectedLinks= Arrays.asList("Terms of Use", "Privacy");
+        List<String> expectedLinks= Arrays.asList("Terms of use", "Privacy");
 
         List<String> expectedHeaderLinks= Arrays.asList("Find", "Research","Learn","Advocate","More");
 
@@ -99,7 +99,7 @@ public class Footer extends SetupClass {
 
         helper.log(actualValues);
 
-        List<String> expectedValuesFind= Arrays.asList(ENV+"/en/find/directory-executiveofficers.aspx", ENV+"/en/find/directory-hba.aspx",null, ENV+"/en/find/award-programs.aspx", ENV+"/en/about-nahb/social-and-media/online-advertising-opportunities-to-reach-builders.aspx");
+        List<String> expectedValuesFind= Arrays.asList(ENV+"/en/find/directory-executiveofficers.aspx", ENV+"/en/find/directory-hba.aspx",ENV+"/en/members/committees-and-councils.aspx", ENV+"/en/find/award-programs.aspx", ENV+"/en/about-nahb/social-and-media/online-advertising-opportunities-to-reach-builders.aspx");
 
         Assert.assertEquals(actualValues, expectedValuesFind);
 
@@ -110,7 +110,7 @@ public class Footer extends SetupClass {
 
         helper.log(actualValues);
 
-        List<String> expectedValuesResearch= Arrays.asList(ENV+"/en/research/nahb-priorities.aspx", ENV+"/en/research/housing-economics.aspx", ENV+"/en/research/legal-issues.aspx", null, ENV+"/en/research/design.aspx");
+        List<String> expectedValuesResearch= Arrays.asList(ENV+"/en/research/nahb-priorities.aspx", ENV+"/en/research/housing-economics.aspx", ENV+"/en/research/legal-issues.aspx", ENV+"/en/members/biz-tools.aspx", ENV+"/en/research/design.aspx");
 
         Assert.assertEquals(actualValues, expectedValuesResearch);
 
@@ -130,7 +130,7 @@ public class Footer extends SetupClass {
 
         helper.log(actualValues);
 
-        List<String> expectedValuesAdvocate= Arrays.asList(ENV+"/en/advocate/builderlink.aspx",null, ENV+"/en/advocate/partners-for-housing.aspx", ENV+"/en/advocate/policy-resolutions.aspx");
+        List<String> expectedValuesAdvocate= Arrays.asList(ENV+"/en/advocate/builderlink.aspx",ENV+"/en/advocate/build-pac.aspx", ENV+"/en/advocate/partners-for-housing.aspx", ENV+"/en/advocate/policy-resolutions.aspx");
 
         Assert.assertEquals(actualValues, expectedValuesAdvocate);
 
@@ -156,13 +156,14 @@ public class Footer extends SetupClass {
         helper.getURL(ENV);
 
 
+        helper.waitForSeconds(4);
 
         //MORE
         List<String>  actualValues = helper.getElementsAttribute(By.xpath(".//*[@id='footer-sitemap-navigation']/div[5]/ul/li/a"), "href");
 
         helper.log(actualValues);
 
-        List<String> expectedValuesMore= Arrays.asList(null, "http://buildersshow.com/Home/", "http://www.nationalhousingendowment.org/", "http://www.hbi.org/","http://www.homeinnovation.com/",ENV+"/en/industry-professionals/international-housing-association.aspx","http://www.bestinamericanliving.com/","http://www.nahbclassic.org/showpage_details.aspx?showpageID=311?userid={0}");
+        List<String> expectedValuesMore= Arrays.asList("http://regression.cd.nahb.velir.com/en/members/hba-resources.aspx", "http://buildersshow.com/Home/", "http://www.nationalhousingendowment.org/", "http://www.hbi.org/","http://www.homeinnovation.com/",ENV+"/en/industry-professionals/international-housing-association.aspx","http://www.bestinamericanliving.com/","http://www.nahbclassic.org/showpage_details.aspx?showpageID=311?userid={0}");
 
         Assert.assertEquals(actualValues, expectedValuesMore); }
 
