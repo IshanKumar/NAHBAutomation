@@ -134,7 +134,8 @@ public class Header extends SetupClass {
 
 
         helper.click(By.cssSelector("#UtilityNavigation>a:nth-child(3)"));
-        helper.waitForSeconds(10);
+        helper.waitForSeconds(16);
+
         Assert.assertEquals(driver.getCurrentUrl(),"https://builderbooks.com/");
 
 

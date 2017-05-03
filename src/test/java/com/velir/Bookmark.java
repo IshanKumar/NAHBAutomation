@@ -68,7 +68,7 @@ public class Bookmark extends SetupClass {
 
         helper.click(By.id("contentregion_0_membercontainerright_0_rptBookmarks_lbDelete_1"));
 
-        helper.waitForSeconds(14);
+        helper.waitForSeconds(24);
 
         Assert.assertFalse(helper.isElementPresent(By.id("contentregion_0_membercontainerright_0_rptBookmarks_hlBookmark_1")));
 
