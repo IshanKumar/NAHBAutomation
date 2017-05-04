@@ -87,6 +87,7 @@ public class AccountRegistration extends SetupClass {
 
         page.loginRepeat(configuration.getString("emailAddress2"), "Pass12345");
 
+        helper.waitForSeconds(6);
 
         Assert.assertEquals(helper.getElementText(By.cssSelector(".nav_btn4")), "WELCOME LARRY");
 
@@ -104,7 +105,7 @@ public class AccountRegistration extends SetupClass {
 
         helper.click(By.id("contentregion_1_btnUsername"));
 
-        helper.waitForSeconds(4);
+        helper.waitForSeconds(8);
 
         forgotRepeat("qaqa", "Incorrect answer");
 
@@ -304,7 +305,7 @@ public class AccountRegistration extends SetupClass {
         helper.sendKeys(By.id("contentregion_1_txtQuestion"), answer);
         helper.sendKeys(By.id("contentregion_1_txtNewPass"), "Pass12345");
         helper.click(By.id("contentregion_1_btnQuestion"));
-        helper.waitForSeconds(8);
+        helper.waitForSeconds(12);
         Assert.assertEquals(helper.getElementText(By.id("divLog")), message);
     }
 
